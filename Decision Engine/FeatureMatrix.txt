@@ -1,0 +1,17 @@
+To create the feature matrix T we itterate through the the training data file by file.For every file, the system call trace is transformed into a list of arrays where each array has k ellements.If there are 5 ellements in the last array it is simply discarded.These arrays of size k are appended one by one to T. As we append them, their are also added as a key in a dictionary.If they are a new entry, we set their value to one.Otherwise we increment their value.This dictionary keeps track of the frequency of each unique feature vector.After duplicates are elimnated from T, each row will be multiplied with each frequency to give greater weight to the features that apper more often in the data.
+
+for K = 5
+T(61290, 5)
+after removing duplicates
+T(14562, 5)
+
+retry experiment with all training data as a single list(only last few syscalls will be discarded0
+k = 5
+
+after removing duplicates
+new T(15308, 5)
+
+
+
+on reduced syscalls 
+T(3087,5)
